@@ -46,8 +46,8 @@ def notas_add(request):
         return redirect("notas_list")
     return render(request,"notas/notas_add.html")
 
-def notas_delete(request, note_id):
-    notas= get_object_or_404(Notas, id=note_id)
+def notas_delete(request, nota_id):
+    notas= get_object_or_404(Notas, id=nota_id)
     notas.delete()
     return redirect("notas_list")
 

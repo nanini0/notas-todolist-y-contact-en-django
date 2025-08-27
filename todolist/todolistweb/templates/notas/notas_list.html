@@ -5,7 +5,8 @@
 <ult>
     {% for nota in notas %}
     <li>
-        {{ nota.notas }} 
+        {{ nota.title }} 
+        {{ nota.created_at }} 
         <a href="{% url 'notas_delete' nota.id %}">Eliminar</a>
     </li>
     {% endfor %}
