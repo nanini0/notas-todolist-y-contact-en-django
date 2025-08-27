@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Lista de notas</h1>
+<ult>
+    {% for nota in notas %}
+    <li>
+        {{ nota.notas }} 
+        <a href="{% url 'notas_delete' nota.id %}">Eliminar</a>
+    </li>
+    {% endfor %}
+</ult>
+<a href="{% url 'notas_add' %}"> agregar nota</a>
+
+
+{% endblock %}
